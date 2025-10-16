@@ -10,16 +10,16 @@ import time
 import pickle
 
 # Input paths
-TRAINING_PATH = r"D:\Downloads\wildfireDB\features_array_training_top81_cov85.csv"
-VALIDATION_PATH = r"D:\Downloads\wildfireDB\features_array_validation_top81.csv"
+TRAINING_PATH = "features_array_training_top81_cov85.csv"
+VALIDATION_PATH = "features_array_validation_top81.csv"
 
 # Output paths for models and results
-RESULTS_PATH = r"D:\Downloads\wildfireDB\models\LR\logistic_regression_results.txt"
-MODEL_L1_PATH = r"D:\Downloads\wildfireDB\models\LR\model_l1_lasso.pkl"
-MODEL_L2_PATH = r"D:\Downloads\wildfireDB\models\LR\model_l2_ridge.pkl"
-MODEL_ELASTIC_PATH = r"D:\Downloads\wildfireDB\models\LR\model_elasticnet.pkl"
-SCALER_PATH = r"D:\Downloads\wildfireDB\models\LR\scaler.pkl"
-BEST_MODEL_PATH = r"D:\Downloads\wildfireDB\models\LR\best_model.pkl"
+RESULTS_PATH = "models/LR/logistic_regression_results.txt"
+MODEL_L1_PATH = "models/LR/model_l1_lasso.pkl"
+MODEL_L2_PATH = "models/LR/model_l2_ridge.pkl"
+MODEL_ELASTIC_PATH = "models/LR/model_elasticnet.pkl"
+SCALER_PATH = "models/LR/scaler.pkl"
+BEST_MODEL_PATH = "models/LR/best_model.pkl"
 
 print("="*80)
 print("LOGISTIC REGRESSION TRAINING WITH REGULARIZATION")
