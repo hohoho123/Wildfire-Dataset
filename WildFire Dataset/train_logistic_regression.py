@@ -10,8 +10,8 @@ import time
 import pickle
 
 # Input paths
-TRAINING_PATH = "features_array_training_top81_cov85.csv"
-VALIDATION_PATH = "features_array_validation_top81.csv"
+TRAINING_PATH = "features_array_training_set.csv"
+VALIDATION_PATH = "features_array_validation_set.csv"
 
 # Output paths for models and results
 RESULTS_PATH = "models/LR/logistic_regression_results.txt"
@@ -267,9 +267,11 @@ model_elastic = LogisticRegressionCV(
     solver='saga',            # Required for elasticnet
     l1_ratios=[0.5],          # 50% L1, 50% L2 (you can try different ratios)
     scoring='f1',
-    max_iter=2000,            # May need more iterations
+    max_iter=10000,           # Increased significantly for elasticnet convergence
+    tol=1e-3,                 # Slightly relaxed tolerance for faster convergence
     random_state=42,
-    n_jobs=-1
+    n_jobs=-1,
+    verbose=1                 # Show progress
 )
 
 model_elastic.fit(X_train_scaled, y_train)
