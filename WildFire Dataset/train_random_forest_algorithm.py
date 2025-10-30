@@ -142,12 +142,13 @@ def train_model(train_files, output_dir, sep):
 
     # Save the best model
     model_path = os.path.join(output_dir, 'rf_model.joblib')
-    joblib.dump(best_rf_model, model_path)
+    # Compress to reduce artifact size (speeds up pushes and storage)
+    joblib.dump(best_rf_model, model_path, compress=3)
     print(f"   Final model saved to: {model_path}")
 
     # Save the imputer (CRITICAL for testing)
     imputer_path = os.path.join(output_dir, 'imputer.joblib')
-    joblib.dump(imputer, imputer_path)
+    joblib.dump(imputer, imputer_path, compress=3)
     print(f"   Data imputer saved to: {imputer_path}")
 
     # Save the best parameters to a text file

@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+WildFire Dataset/.venv/
+.venv/
+
+# Large data artifacts (keep datasets out of the repo)
+WildFire Dataset/features_array_testing_set.csv
+WildFire Dataset/features_array_training_set.csv
+WildFire Dataset/features_array_validation_set.csv
+
+# Trained model artifacts
+WildFire Dataset/trained RF models/
+*.joblib
+
+# Notebook checkpoints
+.ipynb_checkpoints/
